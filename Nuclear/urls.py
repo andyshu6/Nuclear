@@ -19,7 +19,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^index/', include('Pandora.urls')),
+    # url(r'^index/', include('Pandora.urls')),
     url(r'^pandora/', include('Pandora.urls')),
     # url(r'^', include('django.contrib.auth.urls')),
     # url(r'^', include('users.urls')),
