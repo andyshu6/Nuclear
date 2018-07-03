@@ -6,22 +6,22 @@
 
   <div class="row placeholders">
     <div class="col-xs-6 col-sm-3 placeholder">
-      <a href="http://192.168.1.120" target="_blank"><img src="/static/pandora/img/bugz.png" width="200" height="200" class="img-responsive" alt="bugzilla thumbnail"></a>
+      <a href="http://192.168.1.120" target="_blank"><img src="/static/pandora/img/tool/bugz.png" width="200" height="200" class="img-responsive" alt="bugzilla thumbnail"></a>
       <a href="http://192.168.1.120" target="_blank"><h4>Bugzilla</h4></a>
       <span class="text-muted">Bug-tracking system</span>
     </div>
     <div class="col-xs-6 col-sm-3 placeholder">
-      <a href="http://192.168.1.120" target="_blank"><img src="/static/pandora/img/redmine.png" width="200" height="200" class="img-rounded" alt="redmine thumbnail"></a>>
+      <a href="http://192.168.1.120" target="_blank"><img src="/static/pandora/img/tool/redmine.png" width="200" height="200" class="img-rounded" alt="redmine thumbnail"></a>>
       <a href="http://192.168.1.120" target="_blank"><h4>Redmine</h4></a>
       <span class="text-muted">Flexible project management web application</span>
     </div>
     <div class="col-xs-6 col-sm-3 placeholder">
-      <a href="http://192.168.1.145:8080" target="_blank"><img src="/static/pandora/img/jenkins.png" width="200" height="200" class="img-responsive" alt="jenkins thumbnail"></a>
+      <a href="http://192.168.1.145:8080" target="_blank"><img src="/static/pandora/img/tool/jenkins.png" width="200" height="200" class="img-responsive" alt="jenkins thumbnail"></a>
       <a href="http://192.168.1.145:8080" target="_blank"><h4>Jenkins</h4></a>
       <span class="text-muted">Automation server</span>
     </div>
     <div class="col-xs-6 col-sm-3 placeholder">
-      <a href="http://192.168.1.145:9000" target="_blank"><img src="/static/pandora/img/sonarqube.png" width="200" height="200" class="img-responsive" alt="sonarqube thumbnail"></a>
+      <a href="http://192.168.1.145:9000" target="_blank"><img src="/static/pandora/img/tool/sonarqube.png" width="200" height="200" class="img-responsive" alt="sonarqube thumbnail"></a>
       <a href="http://192.168.1.145:9000" target="_blank"><h4>Sonarqube</h4></a>
       <span class="text-muted">Quality management platform</span>
     </div>
@@ -31,126 +31,24 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>ID</th>
             <th>Name</th>
             <th>Type</th>
             <th>Link</th>
             <th>Desc</th>
+            <th>Number of clicks</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1,001</td>
-            <td>Lorem</td>
-            <td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,002</td>
-            <td>amet</td>
-            <td>consectetur</td>
-            <td>adipiscing</td>
-            <td>elit</td>
-          </tr>
-          <tr>
-            <td>1,003</td>
-            <td>Integer</td>
-            <td>nec</td>
-            <td>odio</td>
-            <td>Praesent</td>
-          </tr>
-          <tr>
-            <td>1,003</td>
-            <td>libero</td>
-            <td>Sed</td>
-            <td>cursus</td>
-            <td>ante</td>
-          </tr>
-          <tr>
-            <td>1,004</td>
-            <td>dapibus</td>
-            <td>diam</td>
-            <td>Sed</td>
-            <td>nisi</td>
-          </tr>
-          <tr>
-            <td>1,005</td>
-            <td>Nulla</td>
-            <td>quis</td>
-            <td>sem</td>
-            <td>at</td>
-          </tr>
-          <tr>
-            <td>1,006</td>
-            <td>nibh</td>
-            <td>elementum</td>
-            <td>imperdiet</td>
-            <td>Duis</td>
-          </tr>
-          <tr>
-            <td>1,007</td>
-            <td>sagittis</td>
-            <td>ipsum</td>
-            <td>Praesent</td>
-            <td>mauris</td>
-          </tr>
-          <tr>
-            <td>1,008</td>
-            <td>Fusce</td>
-            <td>nec</td>
-            <td>tellus</td>
-            <td>sed</td>
-          </tr>
-          <tr>
-            <td>1,009</td>
-            <td>augue</td>
-            <td>semper</td>
-            <td>porta</td>
-            <td>Mauris</td>
-          </tr>
-          <tr>
-            <td>1,010</td>
-            <td>massa</td>
-            <td>Vestibulum</td>
-            <td>lacinia</td>
-            <td>arcu</td>
-          </tr>
-          <tr>
-            <td>1,011</td>
-            <td>eget</td>
-            <td>nulla</td>
-            <td>Class</td>
-            <td>aptent</td>
-          </tr>
-          <tr>
-            <td>1,012</td>
-            <td>taciti</td>
-            <td>sociosqu</td>
-            <td>ad</td>
-            <td>litora</td>
-          </tr>
-          <tr>
-            <td>1,013</td>
-            <td>torquent</td>
-            <td>per</td>
-            <td>conubia</td>
-            <td>nostra</td>
-          </tr>
-          <tr>
-            <td>1,014</td>
-            <td>per</td>
-            <td>inceptos</td>
-            <td>himenaeos</td>
-            <td>Curabitur</td>
-          </tr>
-          <tr>
-            <td>1,015</td>
-            <td>sodales</td>
-            <td>ligula</td>
-            <td>in</td>
-            <td>libero</td>
-          </tr>
+          {% for i in toollist %}
+            <tr>
+              <td><a href={{ i.tool_url }} target="_blank">{{ i.tool_name }}</a></td>
+              <td>{{ i.tool_group }}</td>
+              <td>{{ i.tool_url }}</td>
+              <td>{{ i.tool_desc }}</td>
+              <td>{{ i.tool_heat }}</td>
+            </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
