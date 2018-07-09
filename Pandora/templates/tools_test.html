@@ -43,7 +43,9 @@
           {% for i in toollist %}
             <tr>
               <td><a href={{ i.tool_url }} target="_blank">{{ i.tool_name }}</a></td>
-              <td>{{ i.tool_group }}</td>
+              {% for j in i.tool_group.all() %}
+                <td>{{ j.group_name }}</td>
+              {% endfor %}
               <td>{{ i.tool_url }}</td>
               <td>{{ i.tool_desc }}</td>
               <td>{{ i.tool_heat }}</td>

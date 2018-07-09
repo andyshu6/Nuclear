@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 from .models import ToolInfo
 
@@ -6,8 +7,10 @@ def index(request):
     return render(request,'index.html')
 
 def tools_test(request):
-    toollist = ToolInfo.objects.all().select_related('group_code')
+    toollist = ToolInfo.objects.all()
+    grouplist = {}
     for i in toollist:
-        name = i.name
-        type = i.tool_group.group_name
-    return render(request,'tools_test.html', {'toollist':toollist})
+        type = i.tool_group.all()[0].group_name
+        grouplist.append(type)
+
+    return render(request,'tools_test.html', {'toollist':toollist, 'grouplist':grouplist})
