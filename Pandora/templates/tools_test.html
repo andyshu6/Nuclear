@@ -11,7 +11,7 @@
       <span class="text-muted">Bug-tracking system</span>
     </div>
     <div class="col-xs-6 col-sm-3 placeholder">
-      <a href="http://192.168.1.120" target="_blank"><img src="/static/pandora/img/tool/redmine.png" width="200" height="200" class="img-rounded" alt="redmine thumbnail"></a>>
+      <a href="http://192.168.1.120" target="_blank"><img src="/static/pandora/img/tool/redmine.png" width="200" height="200" class="img-rounded" alt="redmine thumbnail"></a>
       <a href="http://192.168.1.120" target="_blank"><h4>Redmine</h4></a>
       <span class="text-muted">Flexible project management web application</span>
     </div>
@@ -43,7 +43,7 @@
           {% for i in toollist %}
             <tr>
               <td><a href={{ i.tool_url }} target="_blank">{{ i.tool_name }}</a></td>
-              {% for j in i.tool_group.all() %}
+              {% for j in i.tool_group.all %}
                 <td>{{ j.group_name }}</td>
               {% endfor %}
               <td>{{ i.tool_url }}</td>
