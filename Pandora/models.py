@@ -6,7 +6,7 @@ class ToolGroupInfo(models.Model):
     group_parent = models.IntegerField(null=True,blank=True)
     group_name = models.CharField(max_length=32)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.group_name
 
 class ToolInfo(models.Model):
@@ -17,7 +17,7 @@ class ToolInfo(models.Model):
     tool_heat = models.IntegerField(default=0)
     tool_group = models.ManyToManyField(ToolGroupInfo)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.tool_name
 
     def get_img_url(self):
